@@ -1,0 +1,25 @@
+[package]
+name = "ztensor"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+license = "GPL-3.0"
+repository = "https://github.com/su-z/ztensor.git"
+
+[dependencies]
+num-traits = "0.2.19"
+nalgebra = { version = "0.33.2", optional = true }
+num-complex = "0.4.6"
+dyn-clone = "1.0.19"
+
+[dev-dependencies]
+lapack = "0.20.0"
+lapack-src = { version = "0.11.0", features = ["openblas"] }
+num-complex = "0.4.6"
+serde = { version = "1.0.219", features = ["derive"] }
+serde-pickle = "1.2.0"
+nalgebra-lapack = "0.25.0"
+
+[features]
+default = []
+to-nalgebra = ["nalgebra"]
